@@ -789,7 +789,7 @@
     "m_SourceType": 1,
     "m_FunctionName": "FilpbookModified",
     "m_FunctionSource": "",
-    "m_FunctionBody": "Tile = floor(fmod(Tile + 0.001, Width*Height));\r\nfloat2 tileScale = float2(1.0, 1.0) / float2(Width, Height);\r\nfloat x = floor((Tile + 0.5) * tileScale.x);\r\nfloat tileX = (Tile - Width * x);\r\nfloat tileY = (Invert.y * Height - (x + Invert.y * 1));\r\nOut = (UV + float2(tileX, tileY)) * tileScale;"
+    "m_FunctionBody": "Tile = floor(fmod(Tile + float(0.00001), Width*Height));\r\nfloat2 tileScale = float2(1.0, 1.0) / float2(Width, Height);\r\nfloat x = floor((Tile + float(0.5)) * tileScale.x);\r\nfloat tileX = (Tile - Width * x);\r\nfloat tileY = (Invert.y * Height - (x + Invert.y * 1));\r\nOut = (UV + float2(tileX, tileY)) * tileScale;"
 }
 
 {
